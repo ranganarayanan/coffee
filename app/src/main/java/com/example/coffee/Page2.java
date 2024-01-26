@@ -10,6 +10,8 @@ import android.widget.ImageView;
 
 public class Page2 extends AppCompatActivity {
 ImageView esarrrow;
+ImageView caarrow;
+ImageView maarrow;
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +22,20 @@ ImageView esarrrow;
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Page2.this,Espresso.class));
+            }
+        });
+        caarrow=(ImageView) findViewById(R.id.capparrow);
+        caarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Page2.this, Cappuccino.class));
+            }
+        });
+        maarrow=(ImageView) findViewById(R.id.macid);
+        maarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Page2.this, Macchiato.class));
             }
         });
     }
