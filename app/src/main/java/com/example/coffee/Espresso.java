@@ -39,9 +39,19 @@ public class Espresso extends AppCompatActivity {
                 count=count+1;
                 con.setText(""+count);
                 rsp.setText(""+(count*240));
+            }
+        });
+        min.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                count=count-1;
+                con.setText(""+count);
+                rsp.setText(""+(count*240));
 
             }
         });
+
+
 
 
 
