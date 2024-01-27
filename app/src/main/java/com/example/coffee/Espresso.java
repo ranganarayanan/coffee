@@ -15,6 +15,15 @@ public class Espresso extends AppCompatActivity {
     TextView con;
     TextView rsp;
     int count=1;
+    ImageView scup;
+    ImageView mcup;
+    ImageView lcup;
+
+
+
+
+
+
 
 
     @SuppressLint("MissingInflatedId")
@@ -49,6 +58,18 @@ public class Espresso extends AppCompatActivity {
                     count=1;
                 con.setText(""+count);
                 rsp.setText(""+(count*240));
+
+            }
+        });
+        scup=(ImageView) findViewById(R.id.smallcup);
+        mcup=(ImageView) findViewById(R.id.medcup);
+        lcup=(ImageView) findViewById(R.id.largecup);
+        scup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scup.setAlpha(1f);
+                scup.setAlpha(0.3f);
+                scup.setAlpha(0.3f);
 
             }
         });
