@@ -45,6 +45,8 @@ public class Espresso extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 count=count-1;
+                if(count<=1)
+                    count=1;
                 con.setText(""+count);
                 rsp.setText(""+(count*240));
 
