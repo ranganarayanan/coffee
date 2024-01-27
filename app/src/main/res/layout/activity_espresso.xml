@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Espresso"
+    android:background="@color/white"
     >
     <ImageView
         android:layout_width="match_parent"
@@ -21,7 +22,8 @@
         <ImageView
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:src="@drawable/arrowback"/>
+            android:src="@drawable/arrowback"
+            android:id="@+id/imbackarrow"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,7 +45,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@+id/background"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:padding="12dp"
         android:id="@+id/essline"
         >
@@ -83,7 +85,8 @@
         android:orientation="horizontal"
         android:layout_below="@+id/essline"
         android:padding="12dp"
-        android:id="@+id/rupee">
+        android:id="@+id/rupee"
+        android:layout_marginTop="5dp">
         <ImageView
             android:layout_width="25dp"
             android:layout_height="25dp"
@@ -104,7 +107,8 @@
         android:text="Size"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:id="@+id/txt"/>
+        android:id="@+id/txt"
+        android:layout_marginTop="5dp"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
@@ -121,14 +125,14 @@
             android:alpha="0.3"
             />
         <ImageView
-            android:layout_width="55dp"
-            android:layout_height="55dp"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:src="@drawable/espresso"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"/>
         <ImageView
-            android:layout_width="65dp"
-            android:layout_height="65dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:src="@drawable/espresso"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="10dp"
@@ -139,7 +143,9 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_below="@+id/img"
-        android:padding="12dp">
+        android:padding="12dp"
+        android:id="@+id/sutxt"
+        android:layout_marginTop="10dp">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -154,12 +160,37 @@
             android:textSize="22dp"
             android:textColor="#ababab"
             android:layout_marginLeft="10dp"/>
-
     </LinearLayout>
-
-
-
-
-
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/sutxt"
+        android:padding="12dp"
+        android:id="@+id/cubes">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/sone"
+            android:alpha="0.3"/>
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:src="@drawable/stwo"
+            android:layout_marginLeft="10dp"/>
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="35dp"
+            android:src="@drawable/sthree"
+            android:layout_marginLeft="5dp"
+            android:alpha="0.3"/>
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/cubes"
+        android:text="Add to cart"
+        android:backgroundTint="#b78877"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"/>
 </RelativeLayout>
