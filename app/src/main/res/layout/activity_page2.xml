@@ -168,7 +168,8 @@
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:src="@drawable/arrow"
-            android:layout_gravity="center_vertical"/>
+            android:layout_gravity="center_vertical"
+            android:id="@+id/mocid"/>
 
     </LinearLayout>
 
@@ -196,7 +197,8 @@
             android:layout_width="50dp"
             android:layout_height="40dp"
             android:src="@drawable/arrow"
-            android:layout_gravity="center_vertical"/>
+            android:layout_gravity="center_vertical"
+            android:id="@+id/latid"/>
     </LinearLayout>
 
 

@@ -12,6 +12,9 @@ public class Page2 extends AppCompatActivity {
 ImageView esarrrow;
 ImageView caarrow;
 ImageView maarrow;
+ImageView moarrow;
+ImageView laarrow;
+
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,5 +41,22 @@ ImageView maarrow;
                 startActivity(new Intent(Page2.this, Macchiato.class));
             }
         });
+        moarrow=(ImageView) findViewById(R.id.mocid);
+        moarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Page2.this, Mocha.class));
+            }
+        });
+        laarrow=(ImageView) findViewById(R.id.latid);
+        laarrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Page2.this, Latte.class));
+            }
+        });
+
+
+
     }
 }
