@@ -34,7 +34,7 @@ public class Latte extends AppCompatActivity {
             public void onClick(View v) {
                 count=count+1;
                 con.setText(""+count);
-                rsp.setText(""+(count*240));
+                rsp.setText(""+(count*50));
             }
         });
         min.setOnClickListener(new View.OnClickListener() {
@@ -44,7 +44,7 @@ public class Latte extends AppCompatActivity {
                 if(count<=1)
                     count=1;
                 con.setText(""+count);
-                rsp.setText(""+(count*240));
+                rsp.setText(""+(count*50));
 
             }
         });
