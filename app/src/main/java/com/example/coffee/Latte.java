@@ -14,6 +14,15 @@ public class Latte extends AppCompatActivity {
     TextView con;
     TextView rsp;
     int count=1;
+    int rate = 50;
+    ImageView scup;
+    ImageView mcup;
+    ImageView lcup;
+    ImageView fcube;
+    ImageView scube;
+    ImageView tcube;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,5 +57,70 @@ public class Latte extends AppCompatActivity {
 
             }
         });
+        scup = (ImageView) findViewById(R.id.smallcup);
+        mcup = (ImageView) findViewById(R.id.medcup);
+        lcup = (ImageView) findViewById(R.id.largecup);
+        scup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scup.setAlpha(1.0f);
+                mcup.setAlpha(0.3f);
+                lcup.setAlpha(0.3f);
+                rate=40;
+                con.setText(""+count);
+                rsp.setText(""+(rate*count));
+            }
+        });
+        mcup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scup.setAlpha(0.3f);
+                mcup.setAlpha(1.0f);
+                lcup.setAlpha(0.3f);
+                rate=50;
+                con.setText(""+count);
+                rsp.setText(""+(rate*count));
+            }
+        });
+        lcup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                scup.setAlpha(0.3f);
+                mcup.setAlpha(0.3f);
+                lcup.setAlpha(1.0f);
+                rate=60;
+                con.setText(""+count);
+                rsp.setText(""+(rate*count));
+            }
+        });
+        fcube=(ImageView) findViewById(R.id.onecube);
+        scube=(ImageView) findViewById(R.id.twocube);
+        tcube=(ImageView) findViewById(R.id.threecube);
+        fcube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fcube.setAlpha(1.0f);
+                scube.setAlpha(0.3f);
+                tcube.setAlpha(0.3f);
+            }
+        });
+        ;
+        scube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fcube.setAlpha(0.3f);
+                scube.setAlpha(1.0f);
+                tcube.setAlpha(0.3f);
+            }
+        });
+        tcube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fcube.setAlpha(0.3f);
+                scube.setAlpha(0.3f);
+                tcube.setAlpha(1.0f);
+            }
+        });
+
     }
 }

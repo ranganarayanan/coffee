@@ -180,24 +180,29 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:src="@drawable/sone"
-            android:alpha="0.3"/>
+            android:alpha="0.3"
+            android:id="@+id/onecube"/>
         <ImageView
             android:layout_width="60dp"
             android:layout_height="30dp"
             android:src="@drawable/stwo"
-            android:layout_marginLeft="10dp"/>
+            android:layout_marginLeft="10dp"
+            android:id="@+id/twocube"/>
         <ImageView
             android:layout_width="65dp"
             android:layout_height="35dp"
             android:src="@drawable/sthree"
             android:layout_marginLeft="5dp"
-            android:alpha="0.3"/>
+            android:alpha="0.3"
+            android:id="@+id/threecube"/>
     </LinearLayout>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_below="@+id/cubes"
         android:text="Add to cart"
+        android:textSize="18dp"
+        android:textStyle="bold"
         android:backgroundTint="#b78877"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"/>

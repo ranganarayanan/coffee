@@ -19,6 +19,9 @@ public class Espresso extends AppCompatActivity {
     ImageView scup;
     ImageView mcup;
     ImageView lcup;
+    ImageView fcube;
+    ImageView scube;
+    ImageView tcube;
 
 
     @SuppressLint("MissingInflatedId")
@@ -62,6 +65,9 @@ public class Espresso extends AppCompatActivity {
         scup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                scup.setAlpha(1.0f);
+                mcup.setAlpha(0.3f);
+                lcup.setAlpha(0.3f);
                 rate=200;
                 con.setText(""+count);
                 rsp.setText(""+(rate*count));
@@ -70,6 +76,9 @@ public class Espresso extends AppCompatActivity {
         mcup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                scup.setAlpha(0.3f);
+                mcup.setAlpha(1.0f);
+                lcup.setAlpha(0.3f);
                 rate=210;
                 con.setText(""+count);
                 rsp.setText(""+(rate*count));
@@ -78,11 +87,43 @@ public class Espresso extends AppCompatActivity {
         lcup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                scup.setAlpha(0.3f);
+                mcup.setAlpha(0.3f);
+                lcup.setAlpha(1.0f);
                 rate=230;
                 con.setText(""+count);
                 rsp.setText(""+(rate*count));
             }
         });
+        fcube=(ImageView) findViewById(R.id.onecube);
+        scube=(ImageView) findViewById(R.id.twocube);
+        tcube=(ImageView) findViewById(R.id.threecube);
+        fcube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fcube.setAlpha(1.0f);
+                scube.setAlpha(0.3f);
+                tcube.setAlpha(0.3f);
+            }
+        });
+        ;
+        scube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fcube.setAlpha(0.3f);
+                scube.setAlpha(1.0f);
+                tcube.setAlpha(0.3f);
+            }
+        });
+        tcube.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                fcube.setAlpha(0.3f);
+                scube.setAlpha(0.3f);
+                tcube.setAlpha(1.0f);
+            }
+        });
+
 
     }
 }
