@@ -55,8 +55,5 @@ ImageView laarrow;
                 startActivity(new Intent(Page2.this, Latte.class));
             }
         });
-
-
-
     }
 }
