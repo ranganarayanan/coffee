@@ -16,7 +16,8 @@ public class Orderpage extends AppCompatActivity {
     TextView oamount;
     TextView osize;
     TextView ocube;
-    public static String type,count,amount,size,cube;
+    public static String type,size,cube;
+    public  static int count,amount;
 
 
     @SuppressLint("MissingInflatedId")
@@ -36,6 +37,11 @@ public class Orderpage extends AppCompatActivity {
         oamount=(TextView) findViewById(R.id.amount);
         osize=(TextView) findViewById(R.id.size);
         ocube=(TextView) findViewById(R.id.cube);
+        otype.setText(type);
+        ocount.setText(""+count);
+        oamount.setText(""+count+"X"+amount+"="+(count*amount));
+        osize.setText(size);
+        ocube.setText(cube);
 
 
     }

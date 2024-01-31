@@ -1,5 +1,7 @@
 package com.example.coffee;
 
+import static com.example.coffee.Orderpage.amount;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -141,6 +143,11 @@ public class Espresso extends AppCompatActivity {
         obtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Orderpage.type="Espresso";
+                Orderpage.count=count;
+               Orderpage. amount=rate;
+                Orderpage.size=size;
+                Orderpage.cube=cube;
 
                 startActivity(new Intent(Espresso.this,Orderpage.class));
             }
