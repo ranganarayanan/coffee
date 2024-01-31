@@ -5,6 +5,10 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
         <item name="android:statusBarColor">#b78877</item>
     </style>
+    <!-- res/values/styles.xml -->
+
+
+
 
     <style name="Theme.Coffee" parent="Base.Theme.Coffee" />
 </resources>

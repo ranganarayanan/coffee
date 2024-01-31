@@ -3,6 +3,7 @@ package com.example.coffee;
 import static com.example.coffee.Orderpage.amount;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -38,6 +39,7 @@ public class Espresso extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.activity_espresso);
         bckarrow = (ImageView) findViewById(R.id.imbackarrow);
         bckarrow.setOnClickListener(new View.OnClickListener() {

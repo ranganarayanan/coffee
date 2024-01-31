@@ -1,6 +1,7 @@
 package com.example.coffee;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -34,6 +35,7 @@ public class Macchiato extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.activity_macchiato);
         bckarrow=(ImageView) findViewById(R.id.imbackarrow);
         bckarrow.setOnClickListener(new View.OnClickListener() {

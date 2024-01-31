@@ -1,6 +1,7 @@
 package com.example.coffee;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -24,6 +25,7 @@ public class Orderpage extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.activity_orderpage);
         bckarrow=(ImageView) findViewById(R.id.imbackarrow);
         bckarrow.setOnClickListener(new View.OnClickListener() {

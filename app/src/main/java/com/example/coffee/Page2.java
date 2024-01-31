@@ -1,6 +1,7 @@
 package com.example.coffee;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -19,6 +20,7 @@ ImageView laarrow;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.activity_page2);
         esarrrow=(ImageView) findViewById(R.id.esparrow);
         esarrrow.setOnClickListener(new View.OnClickListener() {

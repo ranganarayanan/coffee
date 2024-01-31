@@ -1,6 +1,7 @@
 package com.example.coffee;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -33,6 +34,7 @@ public class Mocha extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.activity_mocha);
         bckarrow=(ImageView) findViewById(R.id.imbackarrow);
         bckarrow.setOnClickListener(new View.OnClickListener() {
