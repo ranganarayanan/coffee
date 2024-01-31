@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,6 +23,7 @@ public class Espresso extends AppCompatActivity {
     ImageView fcube;
     ImageView scube;
     ImageView tcube;
+    Button obtn;
 
 
     @SuppressLint("MissingInflatedId")
@@ -123,6 +125,8 @@ public class Espresso extends AppCompatActivity {
                 tcube.setAlpha(1.0f);
             }
         });
+        obtn=(Button) findViewById(R.id.btnorder);
+
 
 
     }

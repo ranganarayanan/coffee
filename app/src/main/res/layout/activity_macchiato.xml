@@ -127,8 +127,7 @@
             android:layout_gravity="center_vertical"
             android:alpha="0.3"
             android:id="@+id/smallcup"
-            android:clickable="true"
-            />
+             />
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
@@ -205,6 +204,7 @@
         android:textStyle="bold"
         android:backgroundTint="#b78877"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"/>
+        android:layout_marginTop="25dp"
+        android:id="@+id/btnorder"/>
 
 </RelativeLayout>

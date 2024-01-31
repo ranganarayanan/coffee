@@ -205,6 +205,7 @@
         android:textStyle="bold"
         android:backgroundTint="#b78877"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"/>
+        android:layout_marginTop="25dp"
+        android:id="@+id/btnorder"/>
 
 </RelativeLayout>

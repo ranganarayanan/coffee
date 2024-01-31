@@ -95,6 +95,9 @@ public class Macchiato extends AppCompatActivity {
                 rsp.setText(""+(rate*count));
             }
         });
+        fcube=(ImageView) findViewById(R.id.onecube);
+        scube=(ImageView) findViewById(R.id.twocube);
+        tcube=(ImageView) findViewById(R.id.threecube);
         fcube.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

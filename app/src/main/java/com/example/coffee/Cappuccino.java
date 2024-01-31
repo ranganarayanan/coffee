@@ -31,12 +31,12 @@ public class Cappuccino extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cappuccino);
         bckarrow=(ImageView) findViewById(R.id.imbackarrow);
-        bckarrow.setOnClickListener(new View.OnClickListener() {
+        /*bckarrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
-        });
+        });*/
         min=(ImageView) findViewById(R.id.minus);
         max=(ImageView) findViewById(R.id.add);
         con=(TextView) findViewById(R.id.count);
