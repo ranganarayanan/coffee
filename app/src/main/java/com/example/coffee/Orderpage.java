@@ -39,7 +39,7 @@ public class Orderpage extends AppCompatActivity {
         ocube=(TextView) findViewById(R.id.cube);
         otype.setText(type);
         ocount.setText(""+count);
-        oamount.setText(""+count+"X"+amount+"="+(count*amount));
+        oamount.setText("" +count+ "*" +amount+ "=" +(count*amount));
         osize.setText(size);
         ocube.setText(cube);
 
