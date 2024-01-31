@@ -200,7 +200,7 @@
         android:layout_width="200dp"
         android:layout_height="50dp"
         android:layout_below="@+id/cubes"
-        android:text="Add to cart"
+        android:text="Order"
         android:textSize="18dp"
         android:textStyle="bold"
         android:backgroundTint="#b78877"
