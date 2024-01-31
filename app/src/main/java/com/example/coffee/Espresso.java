@@ -25,6 +25,11 @@ public class Espresso extends AppCompatActivity {
     ImageView scube;
     ImageView tcube;
     Button obtn;
+    String size= "Medium";
+    String cube="Normal";
+
+
+
 
 
     @SuppressLint("MissingInflatedId")
@@ -71,6 +76,7 @@ public class Espresso extends AppCompatActivity {
                 scup.setAlpha(1.0f);
                 mcup.setAlpha(0.3f);
                 lcup.setAlpha(0.3f);
+                size="small";
                 rate=200;
                 con.setText(""+count);
                 rsp.setText(""+(rate*count));
@@ -82,6 +88,7 @@ public class Espresso extends AppCompatActivity {
                 scup.setAlpha(0.3f);
                 mcup.setAlpha(1.0f);
                 lcup.setAlpha(0.3f);
+                size="medium";
                 rate=210;
                 con.setText(""+count);
                 rsp.setText(""+(rate*count));
@@ -93,6 +100,7 @@ public class Espresso extends AppCompatActivity {
                 scup.setAlpha(0.3f);
                 mcup.setAlpha(0.3f);
                 lcup.setAlpha(1.0f);
+                size="large";
                 rate=230;
                 con.setText(""+count);
                 rsp.setText(""+(rate*count));
@@ -104,6 +112,7 @@ public class Espresso extends AppCompatActivity {
         fcube.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                cube="light";
                 fcube.setAlpha(1.0f);
                 scube.setAlpha(0.3f);
                 tcube.setAlpha(0.3f);
@@ -113,6 +122,7 @@ public class Espresso extends AppCompatActivity {
         scube.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                cube="normal";
                 fcube.setAlpha(0.3f);
                 scube.setAlpha(1.0f);
                 tcube.setAlpha(0.3f);
@@ -121,6 +131,7 @@ public class Espresso extends AppCompatActivity {
         tcube.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                cube="strong";
                 fcube.setAlpha(0.3f);
                 scube.setAlpha(0.3f);
                 tcube.setAlpha(1.0f);
@@ -130,9 +141,11 @@ public class Espresso extends AppCompatActivity {
         obtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 startActivity(new Intent(Espresso.this,Orderpage.class));
             }
         });
+
     }
 }
 
