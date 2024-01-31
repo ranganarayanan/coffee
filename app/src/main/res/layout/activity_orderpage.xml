@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Orderpage"
-    android:background="#f9f4ee"
+   android:backgroundTint="#f9f4ee"
     android:orientation="vertical"
     android:padding="12dp">
     <ImageView

@@ -3,6 +3,7 @@ package com.example.coffee;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -126,9 +127,12 @@ public class Espresso extends AppCompatActivity {
             }
         });
         obtn=(Button) findViewById(R.id.btnorder);
-
-
-
+        obtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Espresso.this,Orderpage.class));
+            }
+        });
     }
 }
 

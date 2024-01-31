@@ -2,8 +2,10 @@ package com.example.coffee;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,6 +23,9 @@ public class Mocha extends AppCompatActivity {
     ImageView fcube;
     ImageView scube;
     ImageView tcube;
+    Button obtn;
+
+
 
 
     @Override
@@ -119,6 +124,13 @@ public class Mocha extends AppCompatActivity {
                 fcube.setAlpha(0.3f);
                 scube.setAlpha(0.3f);
                 tcube.setAlpha(1.0f);
+            }
+        });
+        obtn=(Button) findViewById(R.id.btnorder);
+        obtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Mocha.this,Orderpage.class));
             }
         });
 

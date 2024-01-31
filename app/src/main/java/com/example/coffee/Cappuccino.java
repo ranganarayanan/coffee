@@ -3,8 +3,10 @@ package com.example.coffee;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +25,7 @@ public class Cappuccino extends AppCompatActivity {
     ImageView fcube;
     ImageView scube;
     ImageView tcube;
+    Button obtn;
 
 
     @SuppressLint("MissingInflatedId")
@@ -31,12 +34,12 @@ public class Cappuccino extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cappuccino);
         bckarrow=(ImageView) findViewById(R.id.imbackarrow);
-        /*bckarrow.setOnClickListener(new View.OnClickListener() {
+        bckarrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
             }
-        });*/
+        });
         min=(ImageView) findViewById(R.id.minus);
         max=(ImageView) findViewById(R.id.add);
         con=(TextView) findViewById(R.id.count);
@@ -122,6 +125,13 @@ public class Cappuccino extends AppCompatActivity {
                 fcube.setAlpha(0.3f);
                 scube.setAlpha(0.3f);
                 tcube.setAlpha(1.0f);
+            }
+        });
+        obtn=(Button) findViewById(R.id.btnorder);
+        obtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Cappuccino.this,Orderpage.class));
             }
         });
 
