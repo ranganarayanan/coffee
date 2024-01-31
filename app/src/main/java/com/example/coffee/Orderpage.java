@@ -1,14 +1,18 @@
 package com.example.coffee;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Orderpage extends AppCompatActivity {
     ImageView bckarrow;
@@ -17,6 +21,8 @@ public class Orderpage extends AppCompatActivity {
     TextView oamount;
     TextView osize;
     TextView ocube;
+    Button buy;
+
     public static String type,size,cube;
     public  static int count,amount;
 
@@ -44,6 +50,30 @@ public class Orderpage extends AppCompatActivity {
         oamount.setText("" +count+ "*" +amount+ "=" +(count*amount));
         osize.setText(size);
         ocube.setText(cube);
+        buy=(Button) findViewById(R.id.btnbuy);
+        buy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                AlertDialog.Builder myAlterBuilder=new AlertDialog.Builder(Orderpage.this);
+                myAlterBuilder.setTitle("Title");
+                myAlterBuilder.setMessage("This is  Message");
+                myAlterBuilder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(Orderpage.this, "sucess", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                myAlterBuilder.setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Toast.makeText(Orderpage.this, "Unsucess", Toast.LENGTH_SHORT).show();
+                    }
+                });
+                myAlterBuilder.show();
+
+
+            }
+        });
 
 
     }
