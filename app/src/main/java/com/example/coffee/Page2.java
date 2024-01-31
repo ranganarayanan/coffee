@@ -20,7 +20,7 @@ ImageView laarrow;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+       getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         setContentView(R.layout.activity_page2);
         esarrrow=(ImageView) findViewById(R.id.esparrow);
         esarrrow.setOnClickListener(new View.OnClickListener() {
