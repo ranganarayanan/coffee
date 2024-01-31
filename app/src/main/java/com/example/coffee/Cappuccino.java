@@ -26,6 +26,8 @@ public class Cappuccino extends AppCompatActivity {
     ImageView scube;
     ImageView tcube;
     Button obtn;
+    String size="Medium";
+    String cube="Normal";
 
 
     @SuppressLint("MissingInflatedId")
@@ -72,6 +74,7 @@ public class Cappuccino extends AppCompatActivity {
                 scup.setAlpha(1.0f);
                 mcup.setAlpha(0.3f);
                 lcup.setAlpha(0.3f);
+                size="Small";
                rate=180;
                 con.setText(""+count);
                 rsp.setText(""+(rate*count));
@@ -83,6 +86,7 @@ public class Cappuccino extends AppCompatActivity {
                 scup.setAlpha(0.3f);
                 mcup.setAlpha(1.0f);
                 lcup.setAlpha(0.3f);
+                size="Medium";
                 rate=190;
                 con.setText(""+count);
                 rsp.setText(""+(rate*count));
@@ -95,6 +99,7 @@ public class Cappuccino extends AppCompatActivity {
                 mcup.setAlpha(0.3f);
                 lcup.setAlpha(1.0f);
                 rate=200;
+                size="Large";
                 con.setText(""+count);
                 rsp.setText(""+(rate*count));
             }
@@ -108,6 +113,7 @@ public class Cappuccino extends AppCompatActivity {
                 fcube.setAlpha(1.0f);
                 scube.setAlpha(0.3f);
                 tcube.setAlpha(0.3f);
+                cube="Light";
             }
         });
         ;
@@ -117,6 +123,7 @@ public class Cappuccino extends AppCompatActivity {
                 fcube.setAlpha(0.3f);
                 scube.setAlpha(1.0f);
                 tcube.setAlpha(0.3f);
+                cube="Normal";
             }
         });
         tcube.setOnClickListener(new View.OnClickListener() {
@@ -125,15 +132,22 @@ public class Cappuccino extends AppCompatActivity {
                 fcube.setAlpha(0.3f);
                 scube.setAlpha(0.3f);
                 tcube.setAlpha(1.0f);
+                cube="Strong";
             }
         });
         obtn=(Button) findViewById(R.id.btnorder);
         obtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Orderpage.type="Cappuccino";
+                Orderpage.count=count;
+                Orderpage. amount=rate;
+                Orderpage.size=size;
+                Orderpage.cube=cube;
                 startActivity(new Intent(Cappuccino.this,Orderpage.class));
             }
         });
+
 
 
     }
